@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieFinder</title>
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/maskable_icon-192x192.png" />
+    <meta name="theme-color" content="#0d47a1" />
+  </head>
+  <body>
+    <header>
+      <!-- Navigasi -->
+
+      <nav class="blue darken-4" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo"
+            >MovieFinder<i class="right material-icons">movie_filter</i></a
+          >
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+
+          <ul class="topnav right hide-on-med-and-down"></ul>
+
+          <ul class="sidenav" id="mobile-demo"></ul>
+        </div>
+      </nav>
+      <!-- Akhir Navigasi -->
+    </header>
+
+    <main>
+      <div class="container row center" id="body-content">
+        <!-- <h2 class="header">Movie Of 2020</h2>
+        <div class="col l6">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="images/badboy.jpg" />
+            </div>
+            <div class="card-stacked left-align">
+              <div class="card-content">
+                <p>
+                  Miami detectives Mike Lowrey and Marcus Burnett must face off
+                  against a mother-and-son pair of drug lords who wreak vengeful
+                  havoc on their city.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col l6">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="images/mulan.jpg" />
+            </div>
+            <div class="card-stacked left-align">
+              <div class="card-content">
+                <p>
+                  A young Chinese maiden disguises herself as a male warrior in
+                  order to save her father.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col l6">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="images/sonic.jpg" />
+            </div>
+            <div class="card-stacked left-align">
+              <div class="card-content">
+                <p>
+                  After discovering a small, blue, fast hedgehog, a small-town
+                  police officer must help him defeat an evil genius who wants
+                  to do experiments on him.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col l6">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="images/dolittle.jpg" />
+            </div>
+            <div class="card-stacked left-align">
+              <div class="card-content">
+                <p class="">
+                  A physician who can talk to animals embarks on an adventure to
+                  find a legendary island with a young apprentice and a crew of
+                  strange pets.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
+
+    <footer class="page-footer blue darken-4">
+      <div class="footer-copyright">
+        <div class="container">
+          <p>
+            Belajar Aplikasi PWA Pertama
+            <span class="gold">Dicoding.com</span> &copy; 2020,
+            <span class="gold">Rinaldo Pasa</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then(() => {
+              console.log('Pendaftaran ServiceWorker berhasil');
+            })
+            .catch(() => {
+              console.log('Pendaftaran ServiceWorker gagal');
+            });
+        });
+      } else {
+        console.log('ServiceWorker belum didukung browser ini.');
+      }
+    </script>
+  </body>
+</html>
